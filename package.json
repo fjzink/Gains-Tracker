@@ -1,0 +1,12 @@
+{
+  "name": "Gains-Tracker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/fjzink/Gains-Tracker.git",
+  "author": "<joeyzink@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn --cwd client install && yarn --cwd client build",
+    "deploy": "cp -a client/dist/. public/"
+  }
+}
