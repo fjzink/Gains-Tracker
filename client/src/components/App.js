@@ -23,6 +23,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import Home from './Home';
 import NoMatch from './NoMatch';
 import Login from './Login';
+import Register from './Register';
 import '../styles/link.scss';
 
 const drawerWidth = 240;
@@ -114,13 +115,15 @@ function App(props) {
               Responsive drawer
             </Typography>
 
-            <Link to="/login" className="loginLink">
+            <Link to="/login" className="appBarLink">
               <Button color="inherit">Login</Button>
+            </Link>
+            <Link to="/register" className="appBarLink">
+              <Button color="inherit">Register</Button>
             </Link>
           </Toolbar>
         </AppBar>
         <nav className={classes.drawer} aria-label="Mailbox folders">
-          {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
           <Hidden smUp implementation="css">
             <Drawer
               container={container}
@@ -132,7 +135,7 @@ function App(props) {
                 paper: classes.drawerPaper,
               }}
               ModalProps={{
-                keepMounted: true, // Better open performance on mobile.
+                keepMounted: true,
               }}
             >
               {drawer}
@@ -154,6 +157,7 @@ function App(props) {
           <div className={classes.toolbar} />
           <Switch>
             <Route path="/login" exact component={Login} />
+            <Route path="/register" exact component={Register} />
             <Route path="/" exact component={Home} />
             <Route component={NoMatch} />
           </Switch>
