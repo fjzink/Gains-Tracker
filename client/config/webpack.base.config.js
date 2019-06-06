@@ -13,6 +13,11 @@ module.exports = env => {
   const { PLATFORM, VERSION } = env;
   return merge([
     {
+      devServer: {
+        proxy: {
+          '/api': 'http://localhost:3000'
+        }
+      },
       entry: ['@babel/polyfill', APP_DIR],
       module: {
         rules: [
