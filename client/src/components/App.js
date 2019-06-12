@@ -112,7 +112,7 @@ function App(props) {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" noWrap className={classes.title}>
-              Responsive drawer
+              Gains Tracker
             </Typography>
 
             <Link to="/login" className="appBarLink">
