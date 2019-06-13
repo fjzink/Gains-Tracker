@@ -5,8 +5,13 @@
   "repository": "https://github.com/fjzink/Gains-Tracker.git",
   "author": "<joeyzink@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": "11.10.1",
+    "yarn": "1.16"
+  },
   "scripts": {
     "build": "yarn --cwd client install && yarn --cwd client build",
-    "deploy": "cp -a client/dist/. public/"
+    "deploy": "cp -a client/dist/. public/",
+    "heroku-postbuild": "yarn build && yarn deploy"
   }
 }
